@@ -25,7 +25,7 @@ async function copyCss() {
             if (err) throw err;
           });
           streamRead.on('data', (data) => {
-            streamWrite.write(data);
+            streamWrite.write(`${data}\n`);
           });
         }
       });
